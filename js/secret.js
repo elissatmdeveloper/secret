@@ -32,12 +32,13 @@ function creaArray(){
      
     //Agafem l'element identificador inicial per moure a través del DOM
     let inici = document.getElementById('inici');
+    let numeroSpan = inici.children[0].children[2];
 
     //Agafem els elements de les cel·les on s'introduiran els nombres
-     let primer = inici.children[0].children[0].children[0];
-     let segon = inici.children[0].children[0].children[1];
-     let tercer = inici.children[0].children[0].children[2];
-     let quart = inici.children[0].children[0].children[3];
+     let primer = numeroSpan.children[0];
+     let segon = numeroSpan.children[1];
+     let tercer = numeroSpan.children[2];
+     let quart = numeroSpan.children[3];
 
     //Els assignem l'esdeveniment per al doble clic
     primer.addEventListener('click', seleccio);
@@ -56,18 +57,18 @@ function creaArray(){
     quart.addEventListener('mouseleave', surtRatoli);
 
 	//Esborrem l'intent d'exemple
-    let intentExemple = inici.children[0].children[3].children[0];
+    let intentExemple = inici.children[0].children[5].children[0];
     intentExemple.parentElement.removeChild(intentExemple);
   
 	//Assignem l'esdeveniment de polsació d'una tecla
 	document.body.addEventListener('keydown', polsacioTecla);
 	
 	//Assignem l'esdeveniment al botó de reiniciar la partida
-    let reiniciar = inici.children[0].children[2];
+    let reiniciar = inici.children[0].children[4];
 	reiniciar.addEventListener('click', reset);
 	
 	//Assignem l'esdeveniment al botó de comprovació del codi
-    let comprovar = inici.children[0].children[1];
+    let comprovar = inici.children[0].children[3];
 	comprovar.addEventListener('click', comprovacio);
      
     //Assignem l'esdeveniment a l'icona fletxa cap avall del codi
@@ -134,7 +135,7 @@ function creaArray(){
 		quart.textContent = "?";
         
         //Eliminem les files d'intents
-        let intent = inici.children[0].children[3];
+        let intent = inici.children[0].children[5];
         if (intent.hasChildNodes()){
             while (intent.childNodes.length >= 1) {
                 intent.removeChild(intent.firstChild);
@@ -203,7 +204,7 @@ function creaArray(){
 
             if(numIntents < 5) { 
                 //Afegim variable amb acces a l'element (div class='intents') partint de (body id='inici')
-                let intents = inici.children[0].children[3];
+                let intents = inici.children[0].children[5];
                 
                 //Afegim els intents
                 let addIntent = document.createElement('div');
@@ -299,7 +300,6 @@ function creaArray(){
         }
     }
 }
- 
  
  
 //jQuery --> 
