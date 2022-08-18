@@ -40,10 +40,10 @@ function creaArray(){
      let quart = inici.children[0].children[0].children[3];
 
     //Els assignem l'esdeveniment per al doble clic
-    primer.addEventListener('dblclick', seleccio);
-    segon.addEventListener('dblclick', seleccio);
-    tercer.addEventListener('dblclick', seleccio);
-    quart.addEventListener('dblclick', seleccio);
+    primer.addEventListener('click', seleccio);
+    segon.addEventListener('click', seleccio);
+    tercer.addEventListener('click', seleccio);
+    quart.addEventListener('click', seleccio);
 
     //Els assignem l'esdeveniment d'entrada i sortida del ratolí
     primer.addEventListener('mouseenter', entraRatoli);
@@ -261,7 +261,7 @@ function creaArray(){
               
             } else {
                 //Si ja estan tots els intents plens, el jugador ha perdut
-                alert("You lost! The number to guess was: " + numAEncertar.join(''));
+                alert("You lost! The number to guess was " + numAEncertar.join(''));
                 reset();
             }
         }
@@ -419,7 +419,7 @@ $(document).ready(function() {
 
                 } else {
                     //Si ja estan tots els intents plens, el jugador ha perdut
-                    alert("You lost! The number to guess was: " + numAEncertar.join(''));
+                    alert("You lost! The number to guess was " + numAEncertar.join(''));
                 }
             }
         }
