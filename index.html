@@ -1,55 +1,39 @@
 ﻿<!DOCTYPE html>
 <html lang="ca" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Secret</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-        <link rel="stylesheet" href="css/secret.css">
+<head>
+	<meta charset="utf-8">
+	<title>Secret</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/secret.css">
 
-        <script type="text/javascript" src="js/secret.js"></script>
-    </head>
-    <body id="inici">
-        <div class="cont_principal">
-            <h1 class="h1">You have 5 attempts to guess the secret number</h1>
-            <h2 class="h2">Good luck !!!</h2>
-            <div class="numero">
-               <span id="primer" class="seleccionat">?</span>
-               <span id="segon">?</span>
-               <span id="tercer">?</span>
-               <span id="quart">?</span>
-            </div>
-            <a href="#" id="comprovar" class="boto">Check</a>
-            <a href="#" id="reinici" class="boto">Reset</a>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous"></script>
 
-            <div class="intents">
-                <div class="intent">
-                    <div class="spanIntent">
-                        <span>1</span>
-                        <span>2</span>
-                        <span>3</span>
-                        <span>4</span>
-                    </div>
-                    <div>
-                        <i class="fas fa-check-square"></i>
-                        <i class="fas fa-check-square"></i>
-                        <i class="fas fa-recycle"></i>
-                    </div>
-                    <div>
-                        <i class="fas fa-arrow-alt-circle-up"></i>
-                        <i class="fas fa-arrow-alt-circle-down"></i>
-                    </div>
-                    <div>
-                        <i class="fas fa-minus-square"></i>
-                        <i class="fas fa-trash"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+	<script type="text/javascript" src="js/secret.js"></script>
+</head>
+
+<body id="inici">
+	<div class="cont_principal">
+		<h1 class="h1">You have 5 attempts to guess the secret number</h1>
+		<h2 class="h2">Good luck !!!</h2>
+		<div class="numero">
+			<span id="primer" class="seleccionat black" contenteditable="true" inputmode="numeric">?</span>
+			<span id="segon" class="black" contenteditable="true" inputmode="numeric">?</span>
+			<span id="tercer" class="black" contenteditable="true" inputmode="numeric">?</span>
+			<span id="quart" class="black" contenteditable="true" inputmode="numeric">?</span>
+		</div>
+		<a href="#" id="comprovar" class="boto">Check</a>
+		<a href="#" id="reinici" class="boto">Reset</a>
+
+		<div class="intents"></div>
+
+	</div>
+</body>
+
 </html>
