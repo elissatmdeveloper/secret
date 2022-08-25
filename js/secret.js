@@ -1,8 +1,8 @@
-//variable global
+// variable global
 let numIntents = 0;
 let numEncertar;
 
-//Funció que genera un array amb quatre números diferents del 0 al 9
+// Funció que genera un array amb quatre números diferents del 0 al 9
 function creaArray() {
 
 	// Initial empty array
@@ -32,7 +32,7 @@ window.onload = function () {
 
 	//Agafem l'element identificador inicial per moure a través del DOM
 	let inici = document.getElementById('inici');
-	let numeroSpan = inici.children[0].children[2];
+	let numeroSpan = inici.children[0].children[3];
 
 	//Agafem els elements de les cel·les on s'introduiran els nombres
 	let primer = numeroSpan.children[0];
@@ -60,11 +60,11 @@ window.onload = function () {
 	document.body.addEventListener('keydown', polsacioTecla);
 
 	//Assignem l'esdeveniment al botó de reiniciar la partida
-	let reiniciar = inici.children[0].children[4];
+	let reiniciar = inici.children[0].children[5];
 	reiniciar.addEventListener('click', reset);
 
 	//Assignem l'esdeveniment al botó de comprovació del codi
-	let comprovar = inici.children[0].children[3];
+	let comprovar = inici.children[0].children[4];
 	comprovar.addEventListener('click', comprovacio);
 
 	//Assignem l'esdeveniment a l'icona fletxa cap avall del codi
@@ -128,7 +128,7 @@ window.onload = function () {
 		quart.textContent = "?";
 
 		//Eliminem les files d'intents
-		let intent = inici.children[0].children[5];
+		let intent = inici.children[0].children[6];
 		if (intent.hasChildNodes()) {
 			while (intent.childNodes.length >= 1) {
 				intent.removeChild(intent.firstChild);
@@ -197,7 +197,7 @@ window.onload = function () {
 
 			if (numIntents < 5) {
 				//Afegim variable amb acces a l'element (div class='intents') partint de (body id='inici')
-				let intents = inici.children[0].children[5];
+				let intents = inici.children[0].children[6];
 
 				//Afegim els intents
 				let addIntent = document.createElement('div');
@@ -299,6 +299,20 @@ window.onload = function () {
 //Ens assegurem que s'han carregat tots els elements del document
 //abans de començar a treballar amb ells
 $(document).ready(function () {
+		
+	// Menu collapse
+	let $menubtn = $('.menubtn');
+	$menubtn.click (function() {
+		let $menucnt = $('.menu-content');
+		let $menubtn = $('.menubtn');
+		if ($menucnt.css('display') == 'none') {
+			$menucnt.css('display', 'block');
+			$menubtn.css('color', 'chartreuse');
+		} else {
+			$menucnt.css('display', 'none');
+			$menubtn.css('color', 'white');
+		}
+	});
 
 	//Afegim variable amb acces a l'element (div class='intents') partint de (body id='inici')
 	let $inici = $('#inici');
