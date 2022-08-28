@@ -1,6 +1,7 @@
 // variable global
 let numIntents = 0;
-let numEncertar;
+let win = "You win! You hit the secret number!";
+let lost = "You lost! The correct number was";
 
 // Funció que genera un array amb quatre números diferents del 0 al 9
 function creaArray() {
@@ -28,7 +29,7 @@ function creaArray() {
 window.onload = function () {
 
 	//Creem el número a endevinar
-	numAEncertar = creaArray();
+	let numAEncertar = creaArray();
 
 	//Agafem l'element identificador inicial per moure a través del DOM
 	let inici = document.getElementById('inici');
@@ -189,7 +190,7 @@ window.onload = function () {
 
 		//Si tots els numeros són correctes, el jugador ha guanyat
 		if (numPosOK == 4) {
-			alert("You win! You guessed the secret number!");
+			alert(win + " > " + numAEncertar.join(''));
 			reset();
 
 		} else {
@@ -255,7 +256,7 @@ window.onload = function () {
 
 			} else {
 				//Si ja estan tots els intents plens, el jugador ha perdut
-				alert("You lost! The number to guess was " + numAEncertar.join(''));
+				alert(lost + " > " + numAEncertar.join(''));
 				reset();
 			}
 		}
@@ -372,7 +373,7 @@ $(document).ready(function () {
 
 			//Si tots els numeros són correctes, el jugador ha guanyat
 			if (numPosOK == 4) {
-				alert("You win! You guessed the secret number!");
+				alert(win + " > " + numAEncertar.join(''));
 				reset();
 
 			} else {
@@ -426,7 +427,7 @@ $(document).ready(function () {
 
 				} else {
 					//Si ja estan tots els intents plens, el jugador ha perdut
-					alert("You lost! The number to guess was " + numAEncertar.join(''));
+					alert(lost + " > " + numAEncertar.join(''));
 				}
 			}
 		}
